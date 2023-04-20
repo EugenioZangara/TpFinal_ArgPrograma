@@ -1,15 +1,10 @@
 package com.programa.argentina.java.prode.pronosticador;
 
-import factory.ConnectionFactory;
-import factory.PartidoInput;
-import factory.PronosticoInput;
 import modelo.Partido;
 import modelo.Pronostico;
 
 import java.util.List;
-
-import dao.PartidoDao;
-import dao.PronosticoDao;
+import java.util.Scanner;
 
 /**
  * Hello world!
@@ -17,31 +12,22 @@ import dao.PronosticoDao;
  */
 public class App {
 	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("INGRESE SU NOMBRE DE USUARIO: ");
+		String nombreUsuario = scanner.nextLine();
+		System.out.println(nombreUsuario);
+		System.out.println(nombreUsuario + ", por favor, ingresa la ruta hacia el archivo"
+				+ "del tipo 'csv' con la información de tu pronóstico: ");
+		String rutaArchivoPronostico = scanner.nextLine();
+		Partidos partido = new Partidos("../partidos.csv");//REEMPLAZAR POR LA RUTA DEL ARCHIVO
+		List<Partido> partidos = partido.cargarPartidos();
 
-		ConnectionFactory factory = new ConnectionFactory();
-		PartidoDao partidoDao = new PartidoDao(factory.recuperaConexion());
-		PronosticoDao pronosticoDao = new PronosticoDao(factory.recuperaConexion());
-		PartidoInput partidoInput = new PartidoInput();
-		List<Partido> partidos = partidoInput.readData();
+		Pronosticos pronostico = new Pronosticos();
+		List<Pronostico> pronosticos = pronostico.cargarPronosticos();
 
-		for (Partido partido : partidos) {
-			System.out.println("actualizando");
-			System.out.println(partido);
-			partidoDao.actualizarPartido(partido);
-		}
-
-		PronosticoInput pronosticoInput = new PronosticoInput();
-		List<Pronostico> pronosticos = pronosticoInput.readData();
-		// PronosticoDao pronosticoDao = new PronosticoDao();
-		for (Pronostico pronostico : pronosticos) {
-			pronosticoDao.actualizarPronostico(pronostico);
-		}
-
-		
-	Puntaje puntaje = new Puntaje(0);
-	int puntajeTotal = puntaje.puntajeRonda(partidos, pronosticos);	
-	System.out.println(puntajeTotal + "este es el puntaje total de la ronda");
+		Puntaje puntaje = new Puntaje(0);
+		int puntajeTotal = puntaje.puntajeRonda(partidos, pronosticos);
+		System.out.println(puntajeTotal + "este es el puntaje total de la ronda");
 	}
 
-	
 }

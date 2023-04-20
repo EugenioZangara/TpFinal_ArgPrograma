@@ -9,10 +9,14 @@ import java.util.List;
 import modelo.Partido;
 
 public class PartidoInput {
-    String csvFile = "../partidos.csv";
+    String csvFile;
     String line = "";
     String cvsSplitBy = ";";
     public List<Partido> partidos = new ArrayList<>();
+    
+    public PartidoInput(String csvFile) {
+        this.csvFile = csvFile;
+    }
 
     public List<Partido> readData() {
         try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {

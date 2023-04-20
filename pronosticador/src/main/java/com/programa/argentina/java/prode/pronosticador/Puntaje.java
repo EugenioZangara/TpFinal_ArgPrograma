@@ -26,19 +26,15 @@ public class Puntaje {
 
 		String ganador;
 		int puntaje = 0;
+		
 
 		if (partido.getGolesA() > partido.getGolesB()) {
 			ganador = partido.getEquipoA();
-			System.out.println("ganoA");
 		} else if (partido.getGolesA() < partido.getGolesB()) {
 			ganador = partido.getEquipoB();
-			System.out.println("ganoB");
 		} else {
 			ganador = "E";
-			System.out.println("empate");
 		}
-		System.out.println("este es el pronostico: " + pronostico.getEquipo() + " : " + pronostico.getResultado());
-		System.out.println("este es el resultado: " + ganador);
 		if (pronostico.getResultado().equals("G")) {
 
 			if (pronostico.getEquipo().equals(ganador)) {
@@ -49,7 +45,6 @@ public class Puntaje {
 				puntaje = this.puntajePorGanar;
 			}
 		} else if (pronostico.getResultado().equals("E")) {
-			System.out.println("ENTRO POR EL EMPATEEEEEE");
 			if (ganador.equals("E")) {
 				puntaje = this.puntajePorEmpate;
 			}
