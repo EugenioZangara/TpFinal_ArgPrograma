@@ -9,7 +9,7 @@ import java.util.List;
 import modelo.Partido;
 
 public class PartidoInput {
-    String csvFile = "C:\\Users\\Zangara\\Documents\\JAVA\\ESPACIO_DE_TRABAJO\\partidos.csv";
+    String csvFile = "../partidos.csv";
     String line = "";
     String cvsSplitBy = ";";
     public List<Partido> partidos = new ArrayList<>();
