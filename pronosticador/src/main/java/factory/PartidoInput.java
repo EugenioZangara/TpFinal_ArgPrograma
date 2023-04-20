@@ -14,7 +14,7 @@ public class PartidoInput {
     String cvsSplitBy = ";";
     public List<Partido> partidos = new ArrayList<>();
 
-    public void readData() {
+    public List<Partido> readData() {
         try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
             while ((line = br.readLine()) != null) {
                 String[] row = line.split(cvsSplitBy);
@@ -23,5 +23,6 @@ public class PartidoInput {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return partidos;
     }
 }

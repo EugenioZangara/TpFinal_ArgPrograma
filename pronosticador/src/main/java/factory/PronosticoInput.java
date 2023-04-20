@@ -9,12 +9,12 @@ import java.util.List;
 import modelo.Pronostico;
 
 public class PronosticoInput {
-    String csvFile = "C:\\Users\\Zangara\\Documents\\JAVA\\ESPACIO_DE_TRABAJO\\pronostico1.csv";
+    String csvFile = "../pronostico1.csv";
     String line = "";
     String cvsSplitBy = ";";
     public List<Pronostico> pronosticos = new ArrayList<>();
 
-    public void readData() {
+    public List<Pronostico> readData() {
         try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
             while ((line = br.readLine()) != null) {
                 String[] row = line.split(cvsSplitBy);
@@ -23,5 +23,6 @@ public class PronosticoInput {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return pronosticos;
     }
 }
