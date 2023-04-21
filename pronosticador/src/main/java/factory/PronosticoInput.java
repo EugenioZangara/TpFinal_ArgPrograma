@@ -9,11 +9,16 @@ import java.util.List;
 import modelo.Pronostico;
 
 public class PronosticoInput {
-    String csvFile = "../pronostico1.csv";
+    String csvFile ;
     String line = "";
     String cvsSplitBy = ";";
     public List<Pronostico> pronosticos = new ArrayList<>();
 
+    public PronosticoInput(String csvFile) {
+        this.csvFile = csvFile;
+    }
+    
+    
     public List<Pronostico> readData() {
         try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
             while ((line = br.readLine()) != null) {

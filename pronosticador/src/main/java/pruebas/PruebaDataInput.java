@@ -7,8 +7,8 @@ import modelo.Pronostico;
 
 public class PruebaDataInput {
     public static void main(String[] args) {
-        PartidoInput dataInput = new PartidoInput();
-        PronosticoInput pronosticos= new PronosticoInput();
+        PartidoInput dataInput = new PartidoInput("../partidos.csv");
+        PronosticoInput pronosticos= new PronosticoInput("../pronostico1.csv");
         
         dataInput.readData();
         pronosticos.readData();
