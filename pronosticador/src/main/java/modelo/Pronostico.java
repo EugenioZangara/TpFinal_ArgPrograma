@@ -6,9 +6,9 @@ int idPartido;
 String equipo;
 String resultado;
 String usuario;
-public Pronostico(int idPronostico, int idPartido, String equipo, String resultado, String usuario) {
+public Pronostico( int idPartido, String equipo, String resultado, String usuario) {
 	super();
-	this.idPronostico = idPronostico;
+	
 	this.idPartido = idPartido;
 	this.equipo = equipo;
 	this.resultado = resultado;
