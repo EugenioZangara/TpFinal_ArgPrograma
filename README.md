@@ -11,7 +11,7 @@ Para utilizar este programa, siga estos pasos:
 2. Ajuste los parámetros para acceder a la base de datos con sus credenciales en el archivo "ConnectionFactory.java", dentro del paquete "factory"
 3. Compile el código fuente utilizando su herramienta de compilación preferida.
 4. Ejecute el programa desde la línea de comandos o haciendo doble clic en el archivo JAR.
-5. Los archivos con los resultados finales de los partidos y los pronóstico, deben encontrarse en la misma carpeta que el archivo compilado para su normal funcinamiento
+5. Los archivos con los resultados finales de los partidos y los pronóstico, deben encontrarse en la misma carpeta que el archivo compilado para su normal funcinamiento (en el repositorio se agregan un archivo "partidos.csv" con resultados y dos archivos "pronostico1.csv" y "pronostico2.csv" a modo de ejemplo).
 6. Cuando se le solicite, ingrese el nombre del archivo CSV que contiene el fixture del campeonato de fútbol.
 7. Cuando se le solicite, ingrese el nombre del archivo CSV que contiene los pronósticos de los resultados previstos por el usuario.
 8. El programa calculará y mostrará el puntaje del usuario en función de la precisión de sus pronósticos.
