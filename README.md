@@ -9,9 +9,10 @@ Para utilizar este programa, siga estos pasos:
 
 1. Compile el código fuente utilizando su herramienta de compilación preferida.
 2. Ejecute el programa desde la línea de comandos o haciendo doble clic en el archivo JAR.
-3. Cuando se le solicite, ingrese el nombre del archivo CSV que contiene el fixture del campeonato de fútbol.
-4. Cuando se le solicite, ingrese el nombre del archivo CSV que contiene los pronósticos de los resultados previstos por el usuario.
-5. El programa calculará y mostrará el puntaje del usuario en función de la precisión de sus pronósticos.
+3. Los archivos con los resultados finales de los partidos y los pronóstico, deben encontrarse en la misma carpeta que el archivo compilado para su normal funcinamiento
+4. Cuando se le solicite, ingrese el nombre del archivo CSV que contiene el fixture del campeonato de fútbol.
+5. Cuando se le solicite, ingrese el nombre del archivo CSV que contiene los pronósticos de los resultados previstos por el usuario.
+6. El programa calculará y mostrará el puntaje del usuario en función de la precisión de sus pronósticos.
 
 ## Formato de los archivos CSV
 
