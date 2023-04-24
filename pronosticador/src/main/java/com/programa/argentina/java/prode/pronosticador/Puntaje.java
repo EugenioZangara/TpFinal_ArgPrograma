@@ -59,8 +59,7 @@ public class Puntaje {
 			for (Pronostico pronostico : pronosticos) {
 				if (partido.getId_partido() == pronostico.getIdPartido()) {
 					puntajeTotal += obtenerPuntaje(partido, pronostico);
-					System.out.println("obtener puntaje=" + obtenerPuntaje(partido, pronostico));
-					System.out.println("puntaje total:" + puntajeTotal);
+					
 				}
 			}
 		}
